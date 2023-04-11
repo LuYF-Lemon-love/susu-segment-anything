@@ -60,20 +60,31 @@ python -m pip install --upgrade pip
 pip install -e .
 ```
 
-The following optional dependencies are necessary for mask post-processing, saving masks in COCO format, the example notebooks, and exporting the model in ONNX format. `jupyter` is also required to run the example notebooks.
-
-1. 下载安装[Microsoft C++ 生成工具](https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/):
+7. 下载安装[Microsoft C++ 生成工具](https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/):
 
 ![](./images/001-mvcpp.png)
 
 ![](./images/002-mvcpp.png)
 
-2. 安装可选可选依赖项:
+8. 安装可选可选依赖项:
 
 ```shell
 pip install opencv-python pycocotools matplotlib onnxruntime onnx -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
+9. 安装 jupyter.
+
+```shell
+pip install jupyter
+```
+
+10. 可选（选择虚拟环境好像不用配置）:
+
+```shell
+jupyter notebook password
+jupyter notebook  --generate-config
+# 在 /home/luyanfeng/.jupyter/jupyter_notebook_config.py 文件中，找到 # c.NotebookApp.notebook_dir = ''，删除 `#`，即取消注释， 并在末尾的 '' 中填写 jupyter notebook 工作目录
+```
 
 ## <a name="GettingStarted"></a>Getting Started
 
