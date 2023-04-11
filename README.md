@@ -161,6 +161,14 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
+### demo
+
+- [01_predictor_demo.ipynb](https://nbviewer.org/github/LuYF-Lemon-love/susu-segment-anything/blob/main/notebooks/01_predictor_demo.ipynb) .
+
+- [01_predictor_example.ipynb](https://nbviewer.org/github/LuYF-Lemon-love/susu-segment-anything/blob/main/notebooks/01_predictor_example.ipynb) .
+
+- [02_automatic_mask_generator_example.ipynb](https://nbviewer.org/github/LuYF-Lemon-love/susu-segment-anything/blob/main/notebooks/02_automatic_mask_generator_example.ipynb) .
+
 ## <a name="GettingStarted"></a>Getting Started
 
 First download a [model checkpoint](#model-checkpoints). Then the model can be used in just a few lines to get masks from a given prompt:
