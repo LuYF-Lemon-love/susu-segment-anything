@@ -86,6 +86,20 @@ jupyter notebook  --generate-config
 # 在 /home/luyanfeng/.jupyter/jupyter_notebook_config.py 文件中，找到 # c.NotebookApp.notebook_dir = ''，删除 `#`，即取消注释， 并在末尾的 '' 中填写 jupyter notebook 工作目录
 ```
 
+### requirements files
+
+1. Freezing dependencies:
+
+```shell
+pip freeze > requirements.txt
+```
+
+2. Using requirements files:
+
+```shell
+pip install -r requirements.txt
+```
+
 ## <a name="GettingStarted"></a>Getting Started
 
 First download a [model checkpoint](#model-checkpoints). Then the model can be used in just a few lines to get masks from a given prompt:
