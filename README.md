@@ -75,7 +75,7 @@ pip install opencv-python pycocotools matplotlib onnxruntime onnx -i https://pyp
 9. 安装 jupyter.
 
 ```shell
-pip install jupyter
+pip install jupyter -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 10. 可选（选择虚拟环境好像不用配置）:
@@ -86,7 +86,68 @@ jupyter notebook  --generate-config
 # 在 /home/luyanfeng/.jupyter/jupyter_notebook_config.py 文件中，找到 # c.NotebookApp.notebook_dir = ''，删除 `#`，即取消注释， 并在末尾的 '' 中填写 jupyter notebook 工作目录
 ```
 
-### requirements files
+### Linux (Ubuntu)
+
+1. 创建虚拟环境:
+
+```shell
+git clone git@github.com:LuYF-Lemon-love/susu-segment-anything.git
+cd susu-segment-anything/
+python3 -m venv env
+```
+
+2. 激活环境:
+
+```shell
+source env/bin/activate
+```
+
+3. 确认 Python 解释器位置:
+
+```shell
+which python
+```
+
+4. Python 版本 (Python 3.9.12)
+
+```shell
+python --version
+```
+
+5. 安装 Pytorch (gpu):
+
+```shell
+pip install torch torchvision -i https://pypi.tuna.tsinghua.edu.cn/simple
+python -m pip install --upgrade pip
+```
+
+6. 安装 Segment Anything:
+
+```shell
+pip install -e .
+```
+
+7. 安装可选可选依赖项:
+
+```shell
+pip install opencv-python pycocotools matplotlib onnxruntime onnx -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+8. 安装 jupyter.
+
+```shell
+pip install jupyter -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+9. 可选（选择虚拟环境好像不用配置）:
+
+```shell
+jupyter notebook password
+jupyter notebook  --generate-config
+# 在 /home/luyanfeng/.jupyter/jupyter_notebook_config.py 文件中，找到 # c.NotebookApp.notebook_dir = ''，删除 `#`，即取消注释， 并在末尾的 '' 中填写 jupyter notebook 工作目录
+```
+
+### requirements files (Linux)
 
 1. Freezing dependencies:
 
@@ -153,7 +214,7 @@ sam = sam_model_registry["<model_type>"](checkpoint="<path/to/checkpoint>")
 ```
 Click the links below to download the checkpoint for the corresponding model type.
 
-* **`default` or `vit_h`: [ViT-H SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth)**, 2.4G, 也可以从链接：https://pan.baidu.com/s/1kfvy47GF3SSw1K8YZDLFBQ?pwd=meu3 提取码：meu3.
+* **`default` or `vit_h`: [ViT-H SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth)**, 2.4G, 也可以从链接：https://pan.baidu.com/s/1kfvy47GF3SSw1K8YZDLFBQ?pwd=meu3 提取码：meu3 下载.
 * `vit_l`: [ViT-L SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth)
 * `vit_b`: [ViT-B SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)
 
