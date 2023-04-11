@@ -139,7 +139,7 @@ pip install opencv-python pycocotools matplotlib onnxruntime onnx -i https://pyp
 pip install jupyter -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-9. 可选（选择虚拟环境好像不用配置）:
+9. 需要配置 jupyter notebook 的目录:
 
 ```shell
 jupyter notebook password
