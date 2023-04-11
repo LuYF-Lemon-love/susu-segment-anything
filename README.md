@@ -19,22 +19,59 @@ The **Segment Anything Model (SAM)** produces high quality object masks from inp
 
 The code requires `python>=3.8`, as well as `pytorch>=1.7` and `torchvision>=0.8`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. Installing both PyTorch and TorchVision with CUDA support is strongly recommended.
 
-Install Segment Anything:
+### Windows 10
 
-```
-pip install git+https://github.com/facebookresearch/segment-anything.git
+1. 创建虚拟环境:
+
+```shell
+git clone git@github.com:LuYF-Lemon-love/susu-segment-anything.git
+cd susu-segment-anything/
+py -m venv env
 ```
 
-or clone the repository locally and install with
+2. 激活环境:
 
+```shell
+.\env\Scripts\activate
 ```
-git clone git@github.com:facebookresearch/segment-anything.git
-cd segment-anything; pip install -e .
+
+3. 确认 Python 解释器位置:
+
+```shell
+where python
+```
+
+4. Python 版本 (Python 3.8.1)
+
+```shell
+python --version
+```
+
+5. 安装 Pytorch (cpu):
+
+```shell
+pip install torch torchvision -i https://pypi.tuna.tsinghua.edu.cn/simple
+python -m pip install --upgrade pip
+```
+
+6. 安装 Segment Anything:
+
+```shell
+pip install -e .
 ```
 
 The following optional dependencies are necessary for mask post-processing, saving masks in COCO format, the example notebooks, and exporting the model in ONNX format. `jupyter` is also required to run the example notebooks.
-```
-pip install opencv-python pycocotools matplotlib onnxruntime onnx
+
+1. 下载安装[Microsoft C++ 生成工具](https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/):
+
+![](./images/001-mvcpp.png)
+
+![](./images/002-mvcpp.png)
+
+2. 安装可选可选依赖项:
+
+```shell
+pip install opencv-python pycocotools matplotlib onnxruntime onnx -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 
